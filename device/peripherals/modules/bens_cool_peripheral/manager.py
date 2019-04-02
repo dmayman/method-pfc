@@ -5,11 +5,11 @@ from typing import Optional, Tuple, Dict, Any
 from device.peripherals.classes.peripheral import manager, modes
 
 # Import manager elements
-from device.peripherals.modules.sht25 import driver, exceptions
+from device.peripherals.modules.bens_cool_peripheral import driver, exceptions
 
 
-class SHT25Manager(manager.PeripheralManager):
-    """Manages an sht25 temperature and humidity sensor."""
+class BCPManager(manager.PeripheralManager):
+    """Manages an bens cool peripheral."""
 
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         """Initializes manager."""
@@ -77,7 +77,7 @@ class SHT25Manager(manager.PeripheralManager):
 
         # Initialize driver
         try:
-            self.driver = driver.SHT25Driver(
+            self.driver = driver.BCPDriver(
                 name=self.name,
                 i2c_lock=self.i2c_lock,
                 bus=self.bus,
@@ -125,7 +125,10 @@ class SHT25Manager(manager.PeripheralManager):
 
     def reset_peripheral(self) -> None:
         """Resets sensor."""
-        self.logger.info("Resetting!!!")
+        self.logger.info("Resetting!")
+
+        Art=text2art("Reset") # Return ascii text (default font) and default chr_ignore=True
+        self.logger.info(Art)
 
         # Clear reported values
         self.clear_reported_values()
@@ -138,6 +141,15 @@ class SHT25Manager(manager.PeripheralManager):
 
         # Sucessfully reset
         self.logger.debug("Successfully reset")
+
+    def say_hello(self) -> None:
+        """Says hello."""
+        self.logger.info("saying hello")
+
+        print("\nHELLO\n")
+
+        # Sucessfully reset
+        self.logger.debug("Successfully said hello")
 
     def shutdown_peripheral(self) -> None:
         """Shutsdown sensor."""
