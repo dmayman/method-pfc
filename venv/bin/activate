@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/ben.graves/method-pfc/venv"
+VIRTUAL_ENV="/Users/davidmayman/Documents/GitHub/method-pfc/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -76,7 +76,7 @@ if [ -n "${BASH:-}" -o -n "${ZSH_VERSION:-}" ] ; then
 fi
 
 # Set project root
-export PROJECT_ROOT=/Users/ben.graves/method-pfc
+export PROJECT_ROOT=/Users/davidmayman/Documents/GitHub/method-pfc
 
 # Set log level
 export LOG_LEVEL=DEBUG
@@ -85,4 +85,4 @@ export LOG_LEVEL=DEBUG
 export RUNTIME_MODE=DEVELOPMENT
 
 # Source project activate file
-source /Users/ben.graves/method-pfc/scripts/install/activate.sh
+source /Users/davidmayman/Documents/GitHub/method-pfc/scripts/install/activate.sh

@@ -1,4 +1,4 @@
-#!/Users/ben.graves/method-pfc/venv/bin/python3.6
+#!/Users/davidmayman/Documents/GitHub/method-pfc/venv/bin/python3.6
 #
 # Very simple serial terminal
 #
