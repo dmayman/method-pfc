@@ -193,5 +193,22 @@
             }
         }
     ],
-    "controllers": null
+    "controllers": [
+        {
+            "name": "HumidityController",
+            "type": "PIDController",
+            "uuid": "b981bc2f-1d08-438c-8a8e-06dcd4005064",
+            "parameters": {
+                "setup": {
+                    "name": "Humidity Controller",
+                    "file_name": "pid/setups/air_temperature"
+                },
+                "variables": {
+                    "sensor_name": "air_humidity_percent",
+                    "positive_actuator_name": "air_humidifier1_relay",
+                    "negative_actuator_name": null
+                }
+            }
+        }
+    ]
 }

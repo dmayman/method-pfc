@@ -107,3 +107,5 @@ def test_shutdown_peripheral() -> None:
     )
     manager.initialize_peripheral()
     manager.shutdown_peripheral()
+
+

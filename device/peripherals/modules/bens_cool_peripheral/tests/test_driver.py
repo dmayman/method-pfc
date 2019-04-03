@@ -74,3 +74,5 @@ def test_reset() -> None:
         mux_simulator=MuxSimulator(),
     )
     driver.reset()
+
+test_read_humidity();
