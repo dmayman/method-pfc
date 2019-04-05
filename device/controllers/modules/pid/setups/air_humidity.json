@@ -7,12 +7,12 @@
 	"parameters": {
 		"variables": {
 			"sensor_name": {
-				"type": "string", 
+				"type": "string",
 				"default": "air_humidity_percent"
 			},
 			"positive_actuator_name": {
 				"type": "string",
-				"default": "air_humidity_relay1"
+				"default": "air_humidifier1_relay"
 			},
 			"negative_actuator_name": null
 		}

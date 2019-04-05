@@ -6,21 +6,16 @@
 	"class_name": "BCPManager",
 	"parameters": {
 		"variables": {
-			"sensor": {
-				"temperature_celsius": {
+			"sensor": null,
+			"actuator": {
+				"output_variable": {
 					"name": {
-						"type": "string",
-						"default": "air_temperature_celsius"
-					}
-				},
-				"humidity_percent": {
-					"name": {
-						"type": "string",
-						"default": "air_humidity_percent"
+						"type": "object",
+						"default": "air_humidifier1_relay"
 					}
 				}
-			},
-			"actuator": null
+			}
+
 		},
 		"communication": {
 			"bus": {

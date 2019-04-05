@@ -80,11 +80,10 @@
                     "file_name": "bens_cool_peripheral/setups/default"
                 },
                 "variables": {
-                    "sensor": {
-                        "temperature_celsius": "air_temperature_celsius",
-                        "humidity_percent": "air_humidity_percent"
-                    },
-                    "actuator": null
+                    "sensor": null,
+                    "actuator": {
+                        "output_variable": "air_humidifier1_relay"
+                    }
                 },
                 "communication": {
                     "bus": "default",
@@ -197,11 +196,11 @@
         {
             "name": "HumidityController",
             "type": "PIDController",
-            "uuid": "b981bc2f-1d08-438c-8a8e-06dcd4005064",
+            "uuid": "955930f7-9aa5-4c5d-b7ee-1b4337dbc52c",
             "parameters": {
                 "setup": {
                     "name": "Humidity Controller",
-                    "file_name": "pid/setups/air_temperature"
+                    "file_name": "pid/setups/air_humidity"
                 },
                 "variables": {
                     "sensor_name": "air_humidity_percent",
