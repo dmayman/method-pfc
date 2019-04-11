@@ -80,7 +80,10 @@
                     "file_name": "bens_cool_peripheral/setups/default"
                 },
                 "variables": {
-                    "sensor": null,
+                    "sensor": {
+                        "temperature_celsius": "air_temperature_celsius",
+                        "humidity_percent": "air_humidity_percent"
+                    },
                     "actuator": {
                         "output_variable": "air_humidifier1_relay"
                     }
@@ -190,6 +193,30 @@
                     "address": "0x66"
                 }
             }
+        },
+        {
+            "name": "Humidifier",
+            "type": "ActuatorMCP23017",
+            "uuid": "11cb4d7c-c8aa-4cbf-a148-92f14ebd97d5",
+            "parameters": {
+                "setup": {
+                    "name": "Humidifier",
+                    "file_name": "actuator_mcp23017/setups/humidifier"
+                },
+                "variables": {
+                    "sensor": null,
+                    "actuator": {
+                        "output_variable": "air_humidifier_percent"
+                    }
+                },
+                "communication": {
+                    "bus": "none",
+                    "mux": "none",
+                    "is_active_high": true,
+                    "address": "0x4A",
+                    "port": 6
+                }
+            }
         }
     ],
     "controllers": [
@@ -204,7 +231,7 @@
                 },
                 "variables": {
                     "sensor_name": "air_humidity_percent",
-                    "positive_actuator_name": "air_humidifier1_relay",
+                    "positive_actuator_name": "air_humidifier_percent",
                     "negative_actuator_name": null
                 }
             }
